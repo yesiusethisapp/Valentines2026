@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+	font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.calendar {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	max-width: 600px;
+	width: 100%;
+}
+
+.day {
+	background: white;
+	border-radius: 20px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.locked { opacity: 0.4; cursor: not-allowed; }
+.opened { background: #ff4d6d; color: white; }
+
+.modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background: white;
+	padding: 2rem;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.hidden { display: none; }
+
+.day {
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.day .emoji {
+	font-size: 2rem;
+}
+
+.day .label {
+	font-size: 0.85rem;
+	font-weight: 600;
+	opacity: 0.85;
+}
+
+.opened {
+	background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+	color: white;
+	transform: scale(1.05);
+}
