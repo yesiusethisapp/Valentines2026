@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>🌹 Rose Day</title>
+		<link rel="stylesheet" href="rose.css" />
+	</head>
+	<body>
+		<audio id="roseMusic" src="rose_day.mp3" preload="auto"></audio>
+
+		<div class="rose-container">
+			<h1>Happy Rose Day 🌹</h1>
+			<p class="message">
+				Tap on any drifting petal to reveal a note meant just for you. (also
+				check out the bouquet button at the bottom left!)
+			</p>
+		</div>
+
+		<!-- Modal -->
+		<div id="noteModal" class="modal hidden">
+			<div class="modal-content">
+				<p id="noteText"></p>
+				<button id="closeNote">Close 💗</button>
+			</div>
+		</div>
+
+		<!-- Bouquet Button -->
+		<button id="bouquetBtn" aria-label="Bouquet">💐</button>
+
+		<script src="rose.js"></script>
+	</body>
+</html>
