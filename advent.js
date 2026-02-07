@@ -25,14 +25,14 @@ if (today >= specialDate) {
 // ---------------------------
 
 const days = [
-    { date: 7, emoji: "🌹", title: "Rose Day", link: "rose.html" },
-    { date: 8, emoji: "💍", title: "Propose Day", link: "propose.html" },
-    { date: 9, emoji: "🍫", title: "Chocolate Day", link: "chocolate.html" },
-    { date: 10, emoji: "🧸", title: "Teddy Day", link: "teddy.html" },
-    { date: 11, emoji: "🤞", title: "Promise Day", link: "promise.html" },
-    { date: 12, emoji: "🤗", title: "Hug Day", link: "hug.html" },
-    { date: 13, emoji: "💋", title: "Kiss Day", link: "kiss.html" },
-    { date: 14, emoji: "❤️", title: "Valentine’s Day", link: "valentine.html" },
+    { date: 7, emoji: "🌹", title: "Feb 7, Rose Day", link: "rose.html" },
+    { date: 8, emoji: "💍", title: "Feb 8, Propose Day", link: "propose.html" },
+    { date: 9, emoji: "🍫", title: "Feb 9, Chocolate Day", link: "chocolate.html" },
+    { date: 10, emoji: "🧸", title: "Feb 10, Teddy Day", link: "teddy.html" },
+    { date: 11, emoji: "🤞", title: "Feb 11, Promise Day", link: "promise.html" },
+    { date: 12, emoji: "🤗", title: "Feb 12, Hug Day", link: "hug.html" },
+    { date: 13, emoji: "💋", title: "Feb 13, Kiss Day", link: "kiss.html" },
+    { date: 14, emoji: "❤️", title: "Feb 14! Valentine’s Day :)", link: "valentine.html" },
 ];
 
 days.forEach((day) => {
