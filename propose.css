@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	background: radial-gradient(circle at top, #fff0f6, #4dd5ff, #4772c0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.propose-container {
+	background: rgba(255,255,255,0.95);
+	padding: 3rem;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+	z-index: 2;
+}
+
+#ring {
+	font-size: 5rem;
+	cursor: pointer;
+	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%,100% { transform: translateY(0); }
+	50% { transform: translateY(-15px); }
+}
+
+.sparkle {
+	position: absolute;
+	font-size: 1.2rem;
+	animation: sparkle 1.8s ease forwards;
+}
+
+@keyframes sparkle {
+	from { transform: scale(0); opacity: 1; }
+	to { transform: scale(1.6); opacity: 0; }
+}
+
+.modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 5;
+}
+
+.modal-content {
+	background: white;
+	padding: 2.5rem;
+	border-radius: 24px;
+	text-align: center;
+	animation: fadeIn 0.6s ease;
+}
+
+.hidden {
+	display: none;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(15px); }
+	to { opacity: 1; transform: translateY(0); }
+}
