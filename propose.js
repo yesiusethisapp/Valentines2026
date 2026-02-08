@@ -114,7 +114,7 @@ function triggerCelebration() {
 
 	// Final flair
 	proposalText.innerHTML =
-		"<strong>WOOOHOOOOOOO YESSS!</strong> 🎉<br>My heart is yours forever, my sweet sweet sweet beautiful girl.";
+		"<strong>WOOOHOOOOO YESSS!</strong> 🎉<br>My heart is yours forever, my sweet sweet sweet beautiful girl. <3";
 	nextBtn.style.display = "none"; // Hide button
 	closeX.style.display = "none"; // Hide 'X'
 
