@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Chocolate Day 🍫</title>
+
+		<!-- Fancy fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="chocolate.css" />
+	</head>
+	<body>
+		<audio id="chocoSound" src="chocolate-snap.mp3" preload="auto"></audio>
+
+		<div class="floating-bars"></div>
+
+		<div class="container">
+			<h1>Happy Chocolate Day 🍫</h1>
+			<p class="subtitle">Each piece was made just for you</p>
+
+			<div class="chocolate-box">
+				<div
+					class="chocolate swirl"
+					data-message="You make my heart melt effortlessly."
+				></div>
+				<div
+					class="chocolate gold filled"
+					data-message="You are my favorite comfort, my safest place, and my sweetest joy."
+				></div>
+				<div
+					class="chocolate stripe"
+					data-message="Life feels richer with you in it."
+				></div>
+				<div
+					class="chocolate heart"
+					data-message="You hold such a gentle, beautiful place in my heart."
+				></div>
+
+				<div
+					class="chocolate nut"
+					data-message="You add texture and excitement to every day."
+				></div>
+				<div
+					class="chocolate velvet"
+					data-message="Being with you feels smooth, calm, and warm."
+				></div>
+				<div
+					class="chocolate gold filled deluxe"
+					data-message="I love you in ways words struggle to capture, but my heart understands completely."
+				></div>
+				<div
+					class="chocolate shine"
+					data-message="You make everything glow a little brighter."
+				></div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="messageModal" class="modal">
+			<div class="modal-content">
+				<span id="close">&times;</span>
+				<p id="messageText"></p>
+			</div>
+		</div>
+
+		<script src="chocolate.js"></script>
+	</body>
+</html>
