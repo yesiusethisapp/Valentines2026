@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a250e, #c68642);
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ================= Floating Chocolates ================= */
+
+.floating-bars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bar {
+  position: absolute;
+  width: 50px;
+  height: 90px;
+  background: linear-gradient(145deg, #6b3b1a, #3b1d0f);
+  border-radius: 10px;
+  opacity: 0.7;
+  animation: drift linear infinite;
+}
+
+.emoji-bar {
+  position: absolute;
+  font-size: 2.4rem;
+  opacity: 0.85;
+  animation: drift linear infinite;
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(110vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120px) rotate(360deg);
+  }
+}
+
+/* ================= Main Content ================= */
+
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+/* ================= Chocolate Box ================= */
+
+.chocolate-box {
+  width: 420px;
+  margin: auto;
+  padding: 24px;
+  background: #2a1408;
+  border-radius: 26px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.5);
+}
+
+/* ================= Chocolates ================= */
+
+.chocolate {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #6b3b1a, #3b1d0f);
+  border-radius: 16px;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+/* Hover cocoa dust */
+.chocolate:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#fff4 1px, transparent 1px);
+  background-size: 6px 6px;
+  animation: dust 0.5s ease;
+}
+
+@keyframes dust {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+
+/* Drizzle */
+.chocolate::before {
+  content: '';
+  position: absolute;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 220%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
+  transform: rotate(18deg);
+  transition: top 0.6s ease;
+}
+
+.chocolate.clicked::before {
+  top: 130%;
+}
+
+/* ================= Individual Designs ================= */
+
+/* Swirl */
+.swirl {
+  background-image: radial-gradient(circle at center, #7a3e1d, #3b1d0f);
+}
+
+/* Gold filled */
+.gold {
+  box-shadow: inset 0 0 0 3px rgba(255,215,100,0.7);
+}
+
+.gold::after {
+  content: '✨';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  animation: sparkle 1.6s infinite alternate;
+}
+
+/* Stripe */
+.stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #6b3b1a,
+    #6b3b1a 10px,
+    #4a250e 10px,
+    #4a250e 20px
+  );
+}
+
+/* Heart */
+.heart::after {
+  content: '❤';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: rgba(255,180,180,0.9);
+}
+
+/* Nut texture */
+.nut {
+  background-image: radial-gradient(#7a3e1d 15%, transparent 16%);
+  background-size: 12px 12px;
+}
+
+/* Velvet */
+.velvet {
+  background: linear-gradient(135deg, #4a1c10, #8b3a2b);
+}
+
+/* Deluxe gold */
+.deluxe {
+  box-shadow: 0 0 12px rgba(255,215,100,0.6);
+}
+
+/* Shine */
+.shine {
+  background: linear-gradient(145deg, #5c2a13, #8b4513);
+}
+
+.shine:hover {
+  filter: brightness(1.15);
+}
+
+/* ================= Animations ================= */
+
+@keyframes sparkle {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* ================= Modal ================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: #fff;
+  color: #4a250e;
+  padding: 32px;
+  border-radius: 18px;
+  max-width: 320px;
+  text-align: center;
+  font-size: 1.2rem;
+  animation: pop 0.3s ease;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
