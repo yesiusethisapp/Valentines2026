@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 80%, #2a0050 0%, #12001f 60%, #070012 100%);
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.ui {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+canvas {
+  display: block;
+}
+
+#finalMessage {
+  position: fixed;
+  bottom: 18%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
