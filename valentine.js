@@ -40,7 +40,7 @@ const pages = [
 		image: "images/9.jpeg",
 	},
 	{
-		text: "To the greatest, most precious, and most important part of my life: I love you, my sweet Kannamma :) Happy Valentine's Day !!!",
+		text: "To the most precious and most important part of my life—my sweet Kannamma, Happy Valentine’s Day, my love. You're more than just a part of my life… you are the heart of it. The warmth in my mornings, the calm in my storms, the smile behind my every reason. The way my world feels brighter when you’re near and softer when you speak. You're my comfort, courage, and safety. I find joy in your laughs and home in your eyes. Every moment with you is precious because it’s you, Kanna; the gentlest strength in my life and biggest blessing I am forever grateful for. I cherish your heart, kindness, and beautiful soul. You make ordinary days feel magical and every dream feel possible. I want you to know that my love for you is deep, steady, and endlessly growing. Today and always, I choose you. I cherish you. I adore you. Forever yours. 💖",
 		image: "images/10.jpeg",
 	},
 ];
