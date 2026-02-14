@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Valentine’s Day</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="valentine.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Background Music -->
+		<audio id="bgMusic" autoplay loop>
+			<source src="music.mp3" type="audio/mpeg" />
+		</audio>
+
+		<div class="hearts-layer"></div>
+		<div class="glow-overlay"></div>
+
+		<div class="card">
+			<h1>Valentine’s Day 2026 ❤️</h1>
+			<p class="subtitle">My Little Letter to You :)</p>
+
+			<div class="letter-container">
+				<button class="nav left" id="prevBtn">&#10094;</button>
+
+				<div class="letter-page">
+					<img id="pageImage" class="page-image" src="" alt="" />
+					<p id="pageText"></p>
+				</div>
+
+				<button class="nav right" id="nextBtn">&#10095;</button>
+			</div>
+
+			<div class="page-indicator">
+				Page <span id="pageNumber">1</span> of <span id="totalPages">1</span>
+			</div>
+		</div>
+
+		<script src="valentine.js"></script>
+	</body>
+</html>

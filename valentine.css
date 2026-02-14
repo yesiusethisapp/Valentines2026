@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #8e0038, #c2185b, #ff6f91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Floating hearts background */
+.hearts-layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2) 8px, transparent 8px),
+                    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.15) 10px, transparent 10px);
+  animation: floatHearts 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(0); }
+  to { transform: translateY(-600px); }
+}
+
+.glow-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.05) 0%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.05) 100%
+  );
+  animation: shimmer 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.card {
+  position: relative;
+  z-index: 10;
+  width: 650px;
+  max-width: 95%;
+  padding: 40px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.letter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.letter-page {
+  width: 80%;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.page-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+#pageText {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.nav {
+  background: rgba(255,255,255,0.25);
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.nav:hover {
+  background: rgba(255,255,255,0.45);
+  transform: scale(1.15);
+}
+
+.page-indicator {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
